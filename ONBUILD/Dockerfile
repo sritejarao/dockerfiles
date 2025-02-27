@@ -1,6 +1,6 @@
 FROM almalinux:9 
 RUN dnf install nginx -y
-# to remove existing html file1
+# to remove existing html file2
 RUN rm -f /usr/share/nginx/html/index.html
 ONBUILD  COPY index.html /usr/share/nginx/html/index.html
 CMD ["nginx", "-g", "daemon off;"]
